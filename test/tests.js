@@ -7,10 +7,39 @@ describe('view', function () {
     assert('function' === typeof View);
   });
 
+  it('should have emitter methods', function () {
+    var View = view('<div></div>');
+    var v = new View();
+    assert(v.emit);
+    assert(v.on);
+    assert(v.once);
+    assert(v.off);
+  });
+
   it('should expose its template', function () {
     var template = '<div></div>';
     var View = view(template);
     assert(template === View.template);
+  });
+
+  it('should emit construct', function (done) {
+    var View = view('<div></div>');
+    var instance;
+    var model = {};
+    var el = document.createElement('div');
+    var options = {};
+    var constructed = false;
+    View.on('construct', function (view, m, e, o) {
+      constructed = true;
+      instance = view;
+      assert(model === m);
+      assert(el === e);
+      assert(options === o);
+      done();
+    });
+    var v = new View(model, el, options);
+    assert(constructed);
+    assert(instance === v);
   });
 });
 
