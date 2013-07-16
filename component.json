@@ -9,7 +9,7 @@
     "component/classes": "*",
     "component/domify": "*",
     "component/emitter": "*",
-    "segmentio/reactive": "*",
+    "ianstormtaylor/reactive": "*",
     "component/type": "*"
   },
   "development": {
