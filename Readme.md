@@ -9,10 +9,10 @@
 ## Example
 
 ```js
-var view = require('view')
+var createView = require('view')
   , template = require('./template.html');
 
-var View = view(template);
+var View = createView(template);
 var view = new View(model);
 
 view.el;       // DOM element
