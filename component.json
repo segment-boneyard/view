@@ -1,23 +1,21 @@
 {
   "name": "view",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "repo": "segmentio/view",
   "description": "Create reactive views.",
   "keywords": ["view", "model", "el", "reactive", "factory"],
   "dependencies": {
-    "component/classes": "*",
     "component/domify": "*",
     "component/emitter": "*",
     "ianstormtaylor/reactive": "*",
-    "component/type": "*"
+    "component/type": "*",
+    "ianstormtaylor/classes": "*"
   },
   "development": {
     "component/assert": "*"
   },
   "scripts": [
-    "lib/index.js",
-    "lib/protos.js"
-  ],
-  "main": "lib/index.js"
+    "index.js"
+  ]
 }

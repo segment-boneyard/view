@@ -19,7 +19,7 @@ describe('view', function () {
   it('should expose its template', function () {
     var template = '<div></div>';
     var View = view(template);
-    assert(template === View.template);
+    assert(template === View.prototype.template);
   });
 
   it('should emit construct', function (done) {
