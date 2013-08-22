@@ -49,7 +49,7 @@ function createView (template) {
     this.el = el || domify(template);
     this.options = options;
     this.reactive = reactive(this.el, this.model || {}, this);
-    this.View.emit('construct', this, model, el, options);
+    this.View.emit('construct', this, this.model, this.el, this.options);
   }
 
   // statics
