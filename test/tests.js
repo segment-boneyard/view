@@ -84,6 +84,11 @@ describe('View', function () {
       var view = new View(model);
       assert(model === view.model);
     });
+
+    it('should generate an empty model', function () {
+      var view = new View();
+      assert('object' === typeof view.model);
+    });
   });
 
   describe('#el', function () {

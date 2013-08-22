@@ -45,10 +45,10 @@ function createView (template) {
       el = null;
     }
 
-    this.model = model;
+    this.model = model || {};
     this.el = el || domify(template);
     this.options = options;
-    this.reactive = reactive(this.el, this.model || {}, this);
+    this.reactive = reactive(this.el, this.model, this);
     this.View.emit('construct', this, this.model, this.el, this.options);
   }
 
