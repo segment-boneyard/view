@@ -15,12 +15,14 @@ module.exports = createView;
 
 /**
  * Create a new view constructor with the given `template`.
+ * Optional `fn` will be assigned to `construct` events.
  *
  * @param {String} template
+ * @param {Function} fn (optional)
  * @return {Function}
  */
 
-function createView (template) {
+function createView (template, fn) {
   if (!template) throw new Error('template required');
 
   /**
@@ -60,6 +62,11 @@ function createView (template) {
   View.prototype.View = View;
   Emitter(View.prototype);
   Classes(View.prototype);
+
+  // assign optional `construct` listener
+  if (fn) {
+    View.on('construct', fn);
+  }
 
   return View;
 }
