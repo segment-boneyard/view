@@ -41,6 +41,25 @@ describe('view', function () {
     assert(constructed);
     assert(instance === v);
   });
+
+  it('should emit construct on domified el', function (done) {
+    var View = view('<div></div>');
+    var instance;
+    var model = {};
+    var options = {};
+    var constructed = false;
+    View.on('construct', function (view, m, e, o) {
+      constructed = true;
+      instance = view;
+      assert(model === m);
+      assert(view.el === e);
+      assert(options === o);
+      done();
+    });
+    var v = new View(model, null, options);
+    assert(constructed);
+    assert(instance === v);
+  });
 });
 
 describe('View', function () {
