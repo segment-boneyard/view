@@ -60,6 +60,25 @@ describe('view', function () {
     assert(constructed);
     assert(instance === v);
   });
+
+  it('should assign optional construct listener', function (done) {
+    var View = view('<div></div>', function (view, m, e, o) {
+      constructed = true;
+      instance = view;
+      assert(model === m);
+      assert(el === e);
+      assert(options === o);
+      done();
+    });
+    var instance;
+    var model = {};
+    var el = document.createElement('div');
+    var options = {};
+    var constructed = false;
+    var v = new View(model, el, options);
+    assert(constructed);
+    assert(instance === v);
+  });
 });
 
 describe('View', function () {
