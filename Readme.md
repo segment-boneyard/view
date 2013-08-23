@@ -25,8 +25,9 @@ view.off;      // component/emitter
 
 ## API
 
-### view(template)
+### view(template[, fn])
   Returns a new View constructor that uses the given `template`.
+  Optional `fn` will be assigned to `construct` events.
 
 ### View(model, el, options)
   The signature of the `View` created. All optional.
