@@ -64,9 +64,7 @@ function createView (template, fn) {
   Classes(View.prototype);
 
   // assign optional `construct` listener
-  if (fn) {
-    View.on('construct', fn);
-  }
+  if (fn) View.on('construct', fn);
 
   return View;
 }
