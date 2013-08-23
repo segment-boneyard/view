@@ -1,3 +1,7 @@
+0.3.0 - August 23, 2013
+-----------------------
+* add shortcut for `construct` event callback, by [@stagas](https://github.com/stagas)
+
 0.2.0 - August 20, 2013
 -----------------------
 * move `template` to the prototype
