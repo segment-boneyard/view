@@ -160,4 +160,11 @@ describe('View', function () {
       assert(!view.el.classList.contains('name'));
     });
   });
+
+  describe('View()', function () {
+    it('should construct when omitting `new`', function () {
+      var view = View();
+      assert(view.el);
+    });
+  });
 });
