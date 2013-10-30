@@ -15,15 +15,15 @@ var template = require('./template.html');
 var View = createView(template);
 var view = new View(model);
 
-view.el;              // Element
-view.reactive;        // Reactive
-view.model;           // Model
-view.find('.btn');    // Element
-view.findAll('.btn'); // NodeList
-view.emit;            // component/emitter
-view.on;              // component/emitter
-view.once;            // component/emitter
-view.off;             // component/emitter
+view.el;                 // Element
+view.reactive;           // Reactive
+view.model;              // Model
+view.find('.button');    // Element
+view.findAll('.button'); // NodeList
+view.emit;               // component/emitter
+view.on;                 // component/emitter
+view.once;               // component/emitter
+view.off;                // component/emitter
 ```
 
 ## API
