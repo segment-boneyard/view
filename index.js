@@ -60,6 +60,12 @@ function createView (template, fn) {
   // prototypes
   View.prototype.template = template;
   View.prototype.View = View;
+  View.prototype.find = function(element){
+    return this.el.querySelector(element);
+  };
+  View.prototype.findAll = function(element){
+    return this.el.querySelectorAll(element);
+  };
   Emitter(View.prototype);
   Classes(View.prototype);
 

@@ -8,19 +8,21 @@
 
 ## Example
 
-```js
+```
 var createView = require('view')
   , template = require('./template.html');
 
 var View = createView(template);
 var view = new View(model);
 
-view.el;       // DOM element
-view.reactive; // reactive instance
-view.model;    // model
-view.emit;     // component/emitter
-view.on;       // component/emitter
-view.off;      // component/emitter
+view.el;              // DOM element
+view.reactive;        // reactive instance
+view.model;           // model
+view.emit;            // component/emitter
+view.on;              // component/emitter
+view.off;             // component/emitter
+view.find('.btn');    // DOM element
+view.findAll('.btn'); // NodeList
 ```
 
 ## API
