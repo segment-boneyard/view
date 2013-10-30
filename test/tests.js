@@ -160,4 +160,26 @@ describe('View', function () {
       assert(!view.el.classList.contains('name'));
     });
   });
+
+  describe('#find', function () {
+    it('should find a class or element inside of view', function () {
+      var View = view('<div><span class="btn">button</span></div>');
+      var createView = new View();
+      var span = createView.find('span');
+      var btn = createView.find('.btn');
+      assert(span !== null);
+      assert(btn !== null);
+    });
+  });
+
+  describe('#findAll', function () {
+    it('should find all classes or elements inside of view', function () {
+      var View = view('<div><span class="btn">open</span><span class="btn">close</span></div>');
+      var createView = new View();
+      var spans = createView.findAll('span');
+      var btns = createView.findAll('.btn');
+      assert(spans.length);
+      assert(btns.length);
+    });
+  });
 });
