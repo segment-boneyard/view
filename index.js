@@ -1,9 +1,9 @@
 
-var Classes = require('classes')
-  , domify = require('domify')
-  , Emitter = require('emitter')
-  , reactive = require('reactive')
-  , type = require('type');
+var Classes = require('classes');
+var domify = require('domify');
+var Emitter = require('emitter');
+var reactive = require('reactive');
+var type = require('type');
 
 
 /**
@@ -35,17 +35,8 @@ function createView (template, fn) {
 
   function View (model, el, options) {
     options || (options = {});
-
-    if ('element' === type(model)) {
-      options = el;
-      el = model;
-      model = null;
-    }
-
-    if ('object' === type(el)) {
-      options = el;
-      el = null;
-    }
+    if ('element' == type(model)) options = el, el = model, model = null;
+    if ('object' == type(el)) options = el, el = null;
 
     this.model = model || {};
     this.el = el || domify(template);
