@@ -1,3 +1,8 @@
+0.3.1 - October 30, 2013
+------------------------
+* cleanup
+* add `find` convenience methods, by [@chrisbuttery](https://github.com/chrisbuttery)
+
 0.3.0 - August 23, 2013
 -----------------------
 * add shortcut for `construct` event callback, by [@stagas](https://github.com/stagas)

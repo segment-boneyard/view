@@ -3,7 +3,7 @@
   "version": "0.3.1",
   "license": "MIT",
   "repo": "segmentio/view",
-  "description": "Create reactive views.",
+  "description": "Create reactive views easily.",
   "keywords": ["view", "model", "el", "reactive", "factory"],
   "dependencies": {
     "component/domify": "*",
@@ -16,6 +16,9 @@
     "component/assert": "*"
   },
   "scripts": [
-    "index.js"
-  ]
+    "lib/index.js",
+    "lib/protos.js",
+    "lib/statics.js"
+  ],
+  "main": "lib/index.js"
 }

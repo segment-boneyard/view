@@ -1,6 +1,7 @@
 describe('view', function () {
-  var assert = require('assert')
-    , view = require('view');
+
+  var assert = require('assert');
+  var view = require('view');
 
   it('should return a constructor', function () {
     var View = view('<div></div>');
@@ -182,4 +183,5 @@ describe('View', function () {
       assert(btns.length);
     });
   });
+
 });

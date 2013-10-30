@@ -1,6 +1,6 @@
 # View
 
-  Create reactive views.
+  Create reactive views easily.
 
 ## Installation
 
@@ -15,14 +15,15 @@ var createView = require('view')
 var View = createView(template);
 var view = new View(model);
 
-view.el;              // DOM element
-view.reactive;        // reactive instance
-view.model;           // model
+view.el;              // Element
+view.reactive;        // Reactive
+view.model;           // Model
+view.find('.btn');    // Element
+view.findAll('.btn'); // NodeList
 view.emit;            // component/emitter
 view.on;              // component/emitter
+view.once;            // component/emitter
 view.off;             // component/emitter
-view.find('.btn');    // DOM element
-view.findAll('.btn'); // NodeList
 ```
 
 ## API

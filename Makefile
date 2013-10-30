@@ -1,14 +1,14 @@
 
-build: components index.js
+build: components lib/*
 	@component build --dev
 
 components: component.json
 	@component install --dev
 
 clean:
-	rm -fr build components
+	@rm -fr build components
 
 test: build
-	open test/index.html
+	@open test/index.html
 
 .PHONY: clean test
