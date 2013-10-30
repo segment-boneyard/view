@@ -177,7 +177,7 @@ describe('View', function () {
       var View = view('<div><span class="btn">open</span><span class="btn">close</span></div>');
       var createView = new View();
       var spans = createView.findAll('span');
-      var btns = createView.findAll('span');
+      var btns = createView.findAll('.btn');
       assert(spans.length);
       assert(btns.length);
     });
