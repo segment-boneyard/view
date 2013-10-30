@@ -172,7 +172,7 @@ describe('View', function () {
     });
   });
 
-  describe('#find', function () {
+  describe('#findAll', function () {
     it('should find all classes or elements inside of view', function () {
       var View = view('<div><span class="btn">open</span><span class="btn">close</span></div>');
       var createView = new View();
