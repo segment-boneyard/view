@@ -8,9 +8,9 @@
 
 ## Example
 
-```
-var createView = require('view')
-  , template = require('./template.html');
+```js
+var createView = require('view');
+var template = require('./template.html');
 
 var View = createView(template);
 var view = new View(model);
