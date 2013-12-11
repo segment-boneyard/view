@@ -1,3 +1,7 @@
+0.4.0 - December 11, 2013
+-------------------------
+* add support for template functions, by [@stagas](https://github.com/stagas)
+
 0.3.1 - October 30, 2013
 ------------------------
 * cleanup
