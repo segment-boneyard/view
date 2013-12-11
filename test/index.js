@@ -23,6 +23,15 @@ describe('view', function () {
     assert(template === View.prototype.template);
   });
 
+  it('should evaluate template function', function () {
+    function template (locals) {
+      return '<div>' + locals.foo + '</div>';
+    };
+    var View = view(template);
+    var v = new View({ foo: 'bar' });
+    assert('bar' === v.el.innerHTML);
+  });
+
   it('should emit construct', function (done) {
     var View = view('<div></div>');
     var instance;
